@@ -13,18 +13,6 @@
       "email": "bea@yahoo.fr",
       "password": "123456",
       "urlImgProfil": "https://thispersondoesnotexist.com/image"
-    },
-    {
-      "pseudo": "salam",
-      "id": 3
-    },
-    {
-      "pseudo": "",
-      "id": 4
-    },
-    {
-      "pseudo": "",
-      "id": 5
     }
   ],
   "articles": [
