@@ -4,17 +4,14 @@
 </script>
 
 <template>
-  <SignUp/>
-  <h1>Hey</h1>
+  <router-view/>
 </template>
 
 <script>
   import SignUp from './components/SignUp.vue';
   export default{
     name: 'App',
-    components: {
-      SignUp
-    }
   }
+
 </script>
 
