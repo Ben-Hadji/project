@@ -15,44 +15,18 @@
       "urlImgProfil": "https://thispersondoesnotexist.com/image"
     },
     {
-      "pseudo": "salam",
+      "pseudo": "ben",
+      "email": "ben@gmail.com",
+      "password": "Ben99",
+      "urlImgProfil": "https://pixabay.com/images/id-7563332/",
       "id": 3
     },
     {
-      "pseudo": "",
+      "pseudo": "SAM",
+      "email": "s@.com",
+      "password": "azer",
+      "urlImgProfil": "bea@yahoo.fr",
       "id": 4
-    },
-    {
-      "pseudo": "",
-      "id": 5
-    },
-    {
-      "pseudo": "BEN",
-      "email": "jeffimelo240@papa.com",
-      "password": "BenZacchari",
-      "urlImgProfil": "https://pixabay.com/images/id-7634083/",
-      "id": 6
-    },
-    {
-      "pseudo": "boubou",
-      "email": "baba@gmail.com",
-      "password": "Charpentier",
-      "urlImgProfil": "https://pixabay.com/images/id-7634083/",
-      "id": 7
-    },
-    {
-      "pseudo": "baba",
-      "email": "sal@gmail.com",
-      "password": "12GH",
-      "urlImgProfil": "https://pixabay.com/images/id-7634083/",
-      "id": 8
-    },
-    {
-      "pseudo": "salaama",
-      "email": "bebe@gg.com",
-      "password": "freaza",
-      "urlImgProfil": "https://pixabay.com/images/id-7563332/",
-      "id": 9
     }
   ],
   "articles": [

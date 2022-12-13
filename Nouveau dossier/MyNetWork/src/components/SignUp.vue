@@ -1,11 +1,12 @@
 <template>
     <h1>Sign Up</h1>
-    <div class="register align-items-center">
+    <div class="way align-items-center">
         <input type="text" v-model="pseudo" placeholder="your pseudo"/>
         <input type="email" v-model="email" placeholder="your email" name="" id=""/>
         <input type="password" v-model="password" placeholder="choose password" name="" id=""/>
         <input type="url" v-model="urlImgProfil" placeholder="profil url" name="" id=""/>
         <input type="button" v-on:click="signUp" value="submit">
+        <p ><router-link to="/login">Login</router-link></p>
     </div>
 </template>
 
@@ -65,8 +66,14 @@
         border: 1px solid skyblue;
     }
 
-    .centre {
+    .register p{
+        width: 300px;
+        height: 40px;
+        padding-left: 100px;
+        display: block;
+       
         margin-left: auto;
         margin-right: auto;
+        
     }
 </style>
