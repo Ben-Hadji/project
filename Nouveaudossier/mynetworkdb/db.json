@@ -1,0 +1,80 @@
+{
+  "utilisateurs": [
+    {
+      "id": 1,
+      "pseudo": "Alain",
+      "email": "alain@yahoo.fr",
+      "password": "123456",
+      "urlImgProfil": "../assets/wp4187881.jpg"
+    },
+    {
+      "id": 2,
+      "pseudo": "Béatrice",
+      "email": "bea@yahoo.fr",
+      "password": "123456",
+      "urlImgProfil": "https://thispersondoesnotexist.com/image"
+    },
+    {
+      "pseudo": "salam",
+      "id": 3
+    },
+    {
+      "pseudo": "",
+      "id": 4
+    },
+    {
+      "pseudo": "",
+      "id": 5
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "contenu": "lorem ipsum",
+      "urlImgArticle": "https://source.unsplash.com/random/1000x300",
+      "like": 2,
+      "pseudo": "Alain",
+      "": "",
+      "date": 1649277945051,
+      "commentaires": [
+        {
+          "id": 1,
+          "contenu": "lorem ipsum",
+          "pseudo": "Béatrice",
+          "dt": 1649277945051
+        },
+        {
+          "id": 2,
+          "contenu": "lorem ipsum",
+          "pseudo": "Béatrice",
+          "dt": 1649277945051
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "contenu": "lorem bea ipsum",
+      "urlImgArticle": "https://source.unsplash.com/random/1000x300",
+      "like": 2,
+      "pseudo": "Alain",
+      "": "",
+      "date": 1649277945051,
+      "commentaires": [
+        {
+          "id": 3,
+          "contenu": "lorem ipsum",
+          "pseudo": "Béatrice",
+          "dt": 1649277945051
+        },
+        {
+          "id": 6,
+          "contenu": "lorem ipsum",
+          "pseudo": "Béatrice",
+          "dt": 1649277945051
+        }
+      ]
+    }
+
+  ]
+}
