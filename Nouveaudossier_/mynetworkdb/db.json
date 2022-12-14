@@ -27,6 +27,13 @@
       "password": "azer",
       "urlImgProfil": "https://thispersondoesnotexist.com/image",
       "id": 4
+    },
+    {
+      "pseudo": "",
+      "email": "",
+      "password": "",
+      "urlImgProfil": "",
+      "id": 5
     }
   ],
   "articles": [
