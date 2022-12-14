@@ -2,9 +2,7 @@
     
     <div class="extend">
         <div class="row">
-            <div class="col-4">
-                <Login/>
-            </div>
+            
             <div class="col-8">
                 <div v-if="pseudo != ''" class="container">
                     <AddArticle/>

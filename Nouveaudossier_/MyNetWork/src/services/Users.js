@@ -30,7 +30,7 @@ export class UserApi{
         }catch(ex){
             console.log(ex)
         }
-    },
+    }
 
     async valide(email, password) {
         try {
@@ -44,5 +44,16 @@ export class UserApi{
             console.log(ex)
         }
     }
+    async logged() {
+        let user = localStorage.getItem("user-info");
+        if (user != null) {
+            this.pseudo = JSON.parse(user).pseudo;
+            return (true)
+        }
+        else { return (false) }
+
+    }
 
 }
+
+export default UserApi;

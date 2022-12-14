@@ -1,25 +1,21 @@
 <template>
     
     
-    <div class="card" style="width: 100;">
+    <div class="callout row card form-control" style="margin-top: 5%; margin-left:27.7%;height: auto; width: 850px">
+        
         <div class="mb-3">
-            <label for="contenu">Contenu</label>
-            <input type="txt" @focus="show = false" class="form-control register" id="contenu" v-model="contenu" placeholder="exprimez vous">
+            <h4 for="contenu">Quoi de neuf ?</h4>
+            <textarea class="form-control " id="exampleFormControlTextarea1" style="width: 800px" rows="3"></textarea>
         </div>
         <div class="mb-3">
             <label for="urlImgArticle">Url de l'image chef</label>
-            <input type="url" @focus="show = false" class="form-control" id="urlImgArticle" v-model="urlImgArticle" placeholder="url vers l'image">
+            <input type="url" @focus="show = false" class="form-control" style="width: 800px" id="urlImgArticle" v-model="urlImgArticle" placeholder="url vers l'image">
         </div>
+
         <div class="mb-3">
-            <input type="submit" :class="classBtn" v-on:click="addArt">
+            <input type="submit" class="classBtn tx bg-success" style="width: 800px" v-on:click="addArt" value="publier">
         </div>
-        <div class="alert alert-danger" v-if="show">
-            <div v-for="message in messages">{{ message }}</div>
-        </div>
-        <v-btn depressed
-               disabled>
-            Disabled
-        </v-btn>
+
     </div>
   
 </template>
@@ -40,10 +36,8 @@
     methods: {
         async addArt(){
             let result = await axios.post(baseUrl, {
-           
-            contenu: this.contenu, 
-            urlImgArticle: this.urlImgArticle
-
+                contenu: this.contenu, 
+                urlImgArticle: this.urlImgArticle
             });
             
             if(this.pseudo !='' && this.contenu != '' && this.urlImgArticle != ''){
@@ -55,6 +49,15 @@
                 }
             }
             else(console.warn('non'))
+        },
+        async logged() {
+            let user = localStorage.getItem("user-info");
+            if (user != null) {
+                this.pseudo = JSON.parse(user).pseudo;
+                return (true)
+            }
+            else {return(false) }
+
         }
     },
     mounted(){

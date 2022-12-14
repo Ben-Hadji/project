@@ -1,48 +1,53 @@
 <template>
-     <!-- <div class="row container" v-for="article in articles" :accesskey="article.id">
-        <h6>{{article.contenu}}</h6>
-        <p>{{article.pseudo}}</p>
-        <p>{{article.date}}</p>
-        <img v-bind:src="article.urlImgArticle" alt="" width="30" class="d-inline-block align-text-top">
-        <p>{{article.commentaires}}</p>
-        
-        
-    </div> -->
-    <div class="row container" v-for="article in articles" :accesskey="article.id">
-       
-       
-        <div class="card " style="width: auto; height: auto">
+     
+    <div class="row " v-for="article in articles" :accesskey="article.id" style="margin-left: 30%; margin-top: 6%; margin-bottom:-4%">
+
+
+        <div class="card " style="width: auto; height: auto;">
             <div class="card-header extend">
                 <ul class="nav nav-tabs justify-content-between card-header-tabs">
                     <li class="nav-item">
                         <h6>{{article.pseudo}}</h6>
-                           </li>
+                    </li>
                     <li class="nav-item">
                         <p>posté le {{article.date}}</p>
                     </li>
                 </ul>
             </div>
             <div>
-                <img :src="article.urlImgArticle" alt="" class="img-fluid"  style="width:800px; height:400px"/>
+                <img :src="article.urlImgArticle" alt="" class="img-fluid" style="width:800px; height:400px" />
             </div>
-            
+
             <div class="card-body">
                 <h3 class="card-title">{{article.contenu}}</h3>
-                <img src='../../assets/like.svg' v-on:click="ilike" alt="" style="width:1.3em; height:auto; margin-left: 1%;"/><i>{{article.like}}  </i>
-                <img src='../../assets/comment.svg' alt="" style="width:1.3em; height:auto; margin-left: 1%;"/>{{article.commentaires.lenght}}<i></i>
+                <img src='../../assets/like.svg' v-on:click="ilike" alt="" style="width:1.3em; height:auto; margin-left: 1%;" /><i>{{article.like}}  </i>
+                <img src='../../assets/comment.svg' alt="" style="width:1.3em; height:auto; margin-left: 1%;" />{{article.commentaires.lenght}}<i></i>
             </div>
-            <div class="bg-light">
-                <ul class="nav extend nav-tabs justify-content-between card-header-tabs" v-for="(comment, index) in article.commentaires" >
+            <div class="card-header bg-light extend" >
+                <ul class="nav nav-tabs  justify-content-between card-header-tabs" v-for="(comment, index) in article.commentaires">
                     <li class="nav-item">
-                        <h6>{{comment.contenu}}</h6>
+                        <h6>{{comment.auteur}}</h6>
                     </li>
                     <li class="nav-item">
-                        posté par <i>{{comment.pseudo}}</i>
+                        le {{comment.dt}}
                     </li>
+                    <div><p class="text-start">{{comment.contenu}}</p></div>
+                    
+
                 </ul>
+                
             </div>
+            <div v-if="pseudo != ''" class="bg-white form-control">
+                <div class="mb-3">
+                    <h5 for="contenu" style="margin-top:1rem">Ajouter un commentaire</h5>
+                    <textarea class="form-control " id="exampleFormControlTextarea1" style="margin-bottom: 0.2rem; height: auto;" rows="3"></textarea>
+                    <input type="submit" class="classBtn tx bg-success" style="width: auto" v-on:click="addArt">
+                </div>
+            </div>
+
+            <br />
         </div>
-        <br/>
+        
     </div>
 </template>
 
@@ -53,7 +58,8 @@
         data() {
             return {
                 comment: '',
-                articles: []
+                articles: [],
+                pseudo: ''
                 }
         },
         methods:{
@@ -68,7 +74,10 @@
             ///console.warn(result)
             this.articles = result.data;
             console.warn(this.articles[1].commentaires.length)
-            return
+            let user = localStorage.getItem("user-info");
+            if (user != null) {
+                this.pseudo = JSON.parse(user).pseudo;
+            } 
         }
    
     }

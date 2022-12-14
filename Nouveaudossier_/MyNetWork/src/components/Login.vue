@@ -1,10 +1,10 @@
 <template>
-    <div class="way" style="margin-top: 15%;" >
-        <h3 style="justi">Login</h3>
+    <div class="way" style="margin-top: 15%;">
+
         <input type="email" v-model="email" placeholder="your email" />
         <input type="password" v-model="password" placeholder="choose password" />
         <input type="button" v-on:click="login" value="Login">
-        <p ><router-link to="/sign-up">Sign up</router-link></p>
+        <p><router-link to="/sign-up">Sign up</router-link></p>
     </div>
 </template>
 
@@ -32,6 +32,7 @@
                 }
             }
             console.warn('bizarre')
+            e.preventDefault();
 
             
 
