@@ -4,11 +4,13 @@
 </script>
 
 <template>
+  <Header/>
   <router-view/>
+  
 </template>
 
 <script>
-  import SignUp from './components/SignUp.vue';
+  import Header from './components/Header.vue';
   export default{
     name: 'App',
   }
@@ -30,7 +32,9 @@
         margin-right: auto;
         border: 1px solid skyblue;
     }
-
+    .template{
+      background-image: 'https://pixabay.com/images/id-7563332/';
+    }
     .way p{
         width: 300px;
         height: 40px;
@@ -39,6 +43,7 @@
        
         margin-left: auto;
         margin-right: auto;
+        margin-top: 10%;
         
     }
 </style>

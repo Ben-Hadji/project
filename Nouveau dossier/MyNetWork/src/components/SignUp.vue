@@ -1,10 +1,10 @@
 <template>
-    <h1>Sign Up</h1>
+    
     <div class="way align-items-center">
         <input type="text" v-model="pseudo" placeholder="your pseudo"/>
-        <input type="email" v-model="email" placeholder="your email" name="" id=""/>
-        <input type="password" v-model="password" placeholder="choose password" name="" id=""/>
-        <input type="url" v-model="urlImgProfil" placeholder="profil url" name="" id=""/>
+        <input type="email" v-model="email" placeholder="your email" />
+        <input type="password" v-model="password" placeholder="choose password" />
+        <input type="url" v-model="urlImgProfil" placeholder="profil url" />
         <input type="button" v-on:click="signUp" value="submit">
         <p ><router-link to="/login">Login</router-link></p>
     </div>
@@ -32,16 +32,19 @@
             password: this.password,
             urlImgProfil: this.urlImgProfil});
             
-            console.warn(result);
-            if(result.status==201){
-                localStorage.setItem("user-info", JSON.stringify(result.data));
-                this.$router.push({name: 'Home'})
+            if(this.pseudo !='' && this.email != '' && this.password != '' && this.urlImgProfil != ''){
+                console.warn(result);
+                if(result.status==201){
+                    localStorage.setItem("user-info", JSON.stringify(result.data));
+                    this.$router.push({name: 'Login'})
+                }
             }
+            else(console.warn('non'))
         }
     },
     mounted(){
-            let user = localStorage.getItem("user-infp");
-            if(user)
+            let user = localStorage.getItem("user-info");
+            if(user != null)
             {
                 this.$router.push({name:'Home'})
             }

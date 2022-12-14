@@ -1,9 +1,9 @@
 <template>
-    <h1>Login</h1>
-    <div class="way">
-        <input type="email" v-model="email" placeholder="your email" name="" id=""/>
-        <input type="password" v-model="password" placeholder="choose password" name="" id=""/>
-        <input type="button" v-on:click="login" value="submit">
+    <div class="way" style="margin-top: 15%;" >
+        <h3 style="justi">Login</h3>
+        <input type="email" v-model="email" placeholder="your email" />
+        <input type="password" v-model="password" placeholder="choose password" />
+        <input type="button" v-on:click="login" value="Login">
         <p ><router-link to="/sign-up">Sign up</router-link></p>
     </div>
 </template>
@@ -21,15 +21,19 @@
         }
     },
     methods: {
-        async login(){        
-            let result = await axios.get(
-                'http://localhost:3000/utilisateurs?email='+this.email+'&password='+this.password
-            )    
-
-            if(result.status==200 && result.data.length>0){
-                localStorage.setItem("user-info", JSON.stringify(result.data[0]))
-                this.$router.push({name: 'Home'})
+        async login(){       
+            if(!(this.mail=='' || this.password == '') ){  
+                let result = await axios.get(
+                    'http://localhost:3000/utilisateurs?email='+this.email+'&password='+this.password
+                )   
+                if(result.status==200 && result.data.length>0){
+                    localStorage.setItem("user-info", JSON.stringify(result.data[0]))
+                    this.$router.push({name: 'Home'})
+                }
             }
+            console.warn('bizarre')
+
+            
 
         },
         mounted(){
@@ -44,3 +48,6 @@
 </script>
 
 
+ <style>
+
+</style>

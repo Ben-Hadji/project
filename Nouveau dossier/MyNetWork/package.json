@@ -9,8 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@coreui/icons": "^2.1.0",
     "axios": "^1.2.1",
     "bootstrap": "^5.2.3",
+    "bootstrap-icons-vue": "^1.8.1",
+    "bootstrap-vue": "^2.23.1",
     "vue": "^3.2.41",
     "vue-router": "^4.1.6"
   },
