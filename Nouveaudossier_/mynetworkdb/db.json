@@ -1,0 +1,98 @@
+{
+  "utilisateurs": [
+    {
+      "id": 1,
+      "pseudo": "Alain",
+      "email": "alain@yahoo.fr",
+      "password": "123456",
+      "urlImgProfil": "https://thispersondoesnotexist.com/image"
+    },
+    {
+      "id": 2,
+      "pseudo": "Béatrice",
+      "email": "bea@yahoo.fr",
+      "password": "123456",
+      "urlImgProfil": "https://thispersondoesnotexist.com/image"
+    },
+    {
+      "pseudo": "ben",
+      "email": "ben@gmail.com",
+      "password": "Ben99",
+      "urlImgProfil": "https://pixabay.com/images/id-7563332/",
+      "id": 3
+    },
+    {
+      "pseudo": "SAM",
+      "email": "s@.com",
+      "password": "azer",
+      "urlImgProfil": "https://thispersondoesnotexist.com/image",
+      "id": 4
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "contenu": "lorem ipsum",
+      "urlImgArticle": "https://source.unsplash.com/random/800x300",
+      "like": 2,
+      "pseudo": "Alain",
+      "": "",
+      "date": 1649277945051,
+      "commentaires": [
+        {
+          "id": 1,
+          "contenu": "lorem ipsum",
+          "pseudo": "Béatrice",
+          "dt": 1649277945051
+        },
+        {
+          "id": 2,
+          "contenu": "lorem ipsum",
+          "pseudo": "Béatrice",
+          "dt": 1649277945051
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "contenu": "lorem ipsum",
+      "urlImgArticle": "http://placeimg.com/800/400/tech",
+      "like": 2,
+      "pseudo": "Béatrice",
+      "": "",
+      "date": 1649277945051,
+      "commentaires": [
+        {
+          "id": 1,
+          "contenu": "lorem ipsum",
+          "pseudo": "Béatrice",
+          "dt": 1649277945051
+        },
+        {
+          "id": 2,
+          "contenu": "c'est parfait ça'",
+          "pseudo": "Béatrice",
+          "dt": 1649277945051
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "contenu": "lorem ipsum",
+      "urlImgArticle": "http://placeimg.com/800/400/nature",
+      "like": 2,
+      "pseudo": "SAM",
+      "": "",
+      "date": 1649277945051,
+      "commentaires": [
+        {
+          "id": 1,
+          "contenu": "lorem ipsum",
+          "pseudo": "Béatrice",
+          "dt": 1649277945066
+        }
+      ]
+    }
+  ]
+  
+}
